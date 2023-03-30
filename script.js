@@ -1,9 +1,11 @@
 // Delay animation by 2 seconds
+
 setTimeout(function () {
   document.querySelector(".animation-text").style.animationDelay = "1s";
 }, 0);
 
 // Remove text element after fade-out animation completes
+
 setTimeout(function () {
   document.querySelector(".animation-text").remove();
 }, 5000);
@@ -43,6 +45,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
     var name = prompt("Wie soll der Marker beschriftet werden?");
     localStorage.setItem("promptName", name);
   }
+  console.log(name);
 
   // Haus wählen
 
@@ -54,38 +57,65 @@ navigator.geolocation.getCurrentPosition(function (position) {
     );
     localStorage.setItem("promptHaus", haus);
   }
+  console.log(haus);
 
   //Wappen einstellen
 
-  // if (localStorage.getItem("promptHaus") == "G" ) {
-  //   var wappen = localStorage.setItem("Gryffindor");
-  // } else if(localStorage.getItem("promptHaus") == "S" ) {
-  //   var wappen = localStorage.setItem("Slytherin");
-  // } else if(localStorage.getItem("promptHaus") == "H" ) {
-  //   var wappen = localStorage.setItem("Hufflepuff");
-  // } else if(localStorage.getItem("promptHaus") == "R" ) {
-  //   var wappen = localStorage.setItem("Ravenclaw");
-  // } else {
-  //   var wappen = localStorage.setItem("Kein Wappen ausgewählt");
-  // }
+  if (localStorage.getItem("promptHaus") == "G") {
+    console.log("Gryffindor");
 
-  //Erstelle Name auf Schriftrolle
+    //Erstelle Name auf Schriftrolle
+    var label = document.createElement("div");
+    label.className = "label-g";
+    label.textContent = name;
+    marker.appendChild(label);
 
-  var label = document.createElement("div");
-  label.className = "label";
-  label.textContent = name;
-  marker.appendChild(label);
+    //Marker setzen
+    new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
 
-  //Erstelle Haus Wappen
+  } else if (localStorage.getItem("promptHaus") == "S") {
+    console.log("Slytherin");
 
-  var wappen = document.createElement("div");
-  wappen.className = "wappen";
-  marker.appendChild(wappen);
+    //Erstelle Name auf Schriftrolle
+    var label = document.createElement("div");
+    label.className = "label-s";
+    label.textContent = name;
+    marker.appendChild(label);
 
-  new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
+    //Marker setzen
+    new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
+
+  } else if (localStorage.getItem("promptHaus") == "H") {
+    console.log("Hufflepuff");
+
+    //Erstelle Name auf Schriftrolle
+    var label = document.createElement("div");
+    label.className = "label-h";
+    label.textContent = name;
+    marker.appendChild(label);
+
+    //Marker setzen
+    new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
+
+  } else if (localStorage.getItem("promptHaus") == "R") {
+    console.log("Ravenclaw");
+
+    //Erstelle Name auf Schriftrolle
+    var label = document.createElement("div");
+    label.className = "label-r";
+    label.textContent = name;
+    marker.appendChild(label);
+
+    //Marker setzen
+    new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
+
+  } else {
+    console.log("Kein Haus ausgewählt");
+  }
 
   // Setze das Zentrum der Karte auf die Position des Geräts
 
   map.setZoom(13);
   map.setCenter(lngLat);
+  
 });
