@@ -59,19 +59,19 @@
   height: 100vh;
 }
 
-.bg{
+.bg {
   background-color: #e4d3a0;
 }
 
 /* ++++++++++ Header ++++++++++ */
 
-h1{
+h1 {
   text-align: center;
   font-size: 2rem;
   padding: 2vh 0;
 }
 
-header a{
+header a {
   display: block;
   margin: auto;
   color: black;
@@ -114,7 +114,7 @@ header a:hover {
 }
 
 .marker {
-  background-image: url("../img/Füße.gif");
+  background-image: url("../img/Schritte.gif");
   background-size: contain;
   background-repeat: no-repeat;
   width: 150px;
@@ -124,9 +124,8 @@ header a:hover {
 
 /* ++++++++++ Hogwarts ++++++++++ */
 
-.label{
-  background-image: url("../img/Hogwarts.png"),
-  url("../img/Schriftrolle.png");
+.label {
+  background-image: url("../img/Hogwarts.png"), url("../img/Schriftrolle.png");
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -141,9 +140,8 @@ header a:hover {
 
 /* ++++++++++ Gryffindor ++++++++++ */
 
-.label-g{
-  background-image: url("../img/Gryffindor.png"),
-  url("../img/Schriftrolle.png");
+.label-g {
+  background-image: url("../img/Gryffindor.png"), url("../img/Schriftrolle.png");
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -158,9 +156,8 @@ header a:hover {
 
 /* ++++++++++ Slytherin ++++++++++ */
 
-.label-s{
-  background-image: url("../img/Slytherin.png"),
-  url("../img/Schriftrolle.png");
+.label-s {
+  background-image: url("../img/Slytherin.png"), url("../img/Schriftrolle.png");
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -175,9 +172,8 @@ header a:hover {
 
 /* ++++++++++ Hufflepuff ++++++++++ */
 
-.label-h{
-  background-image: url("../img/Hufflepuff.png"),
-  url("../img/Schriftrolle.png");
+.label-h {
+  background-image: url("../img/Hufflepuff.png"), url("../img/Schriftrolle.png");
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -192,9 +188,8 @@ header a:hover {
 
 /* ++++++++++ Ravenclaw ++++++++++ */
 
-.label-r{
-  background-image: url("../img/Ravenclaw.png"),
-  url("../img/Schriftrolle.png");
+.label-r {
+  background-image: url("../img/Ravenclaw.png"), url("../img/Schriftrolle.png");
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -209,7 +204,7 @@ header a:hover {
 
 /* ++++++++++ Footer ++++++++++ */
 
-h2{
+h2 {
   text-align: center;
   font-size: 2rem;
   padding: 2vh 0;

@@ -111,6 +111,15 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
   } else {
     console.log("Kein Haus ausgewählt");
+
+    //Erstelle Name auf Schriftrolle
+    var label = document.createElement("div");
+    label.className = "label";
+    label.textContent = name;
+    marker.appendChild(label);
+
+    //Marker setzen
+    new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
   }
 
   // Setze das Zentrum der Karte auf die Position des Geräts
