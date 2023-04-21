@@ -4,7 +4,7 @@ setTimeout(function () {
   document.querySelector(".animation-text").style.animationDelay = "0s";
 }, 0);
 
-// Remove text element after fade-out animation completes
+// ! ++++++++++ Remove text element after fade-out animation completes ++++++++++
 
 setTimeout(function () {
   document.querySelector(".animation-text").remove();
@@ -40,24 +40,52 @@ navigator.geolocation.getCurrentPosition(function (position) {
   // ! ++++++++++ Prüfen ob Name vorhanden ++++++++++
 
   if (localStorage.getItem("promptName") !== null) {
-    var name = localStorage.getItem("promptName");
+    var nameInput = localStorage.getItem("promptName");
   } else {
-    var name = prompt("Wie soll der Marker beschriftet werden?");
-    localStorage.setItem("promptName", name);
+    // ! ++++++++++ Eventlistener ++++++++++
+
+    const btn = document.querySelector(".btn");
+    btn.addEventListener("click", saveName);
+
+    // ! ++++++++++ Frage Name ++++++++++
+
+    var formName = document.getElementById("formName");
+    formName.style.display = "block";
   }
-  console.log(name);
+
+  // ! ++++++++++ Name in LocalStorage ++++++++++
+
+  function saveName() {
+    var nameInput = document.getElementById("nameInput").value;
+    localStorage.setItem("promptName", nameInput);
+    formName.style.display = "none";
+    location.reload();
+  }
+
+  console.log(nameInput);
 
   // ! ++++++++++ Haus wählen ++++++++++
 
   if (localStorage.getItem("promptHaus") !== null) {
-    var haus = localStorage.getItem("promptHaus");
+    var hausInput = localStorage.getItem("promptHaus");
   } else {
-    var haus = prompt(
-      "Welchem Haus möchtest du dich anschließen? G = Gryffindor, S = Slytherin, H = Hufflepuff, R = Ravenclaw"
-    );
-    localStorage.setItem("promptHaus", haus);
+    // ! ++++++++++ Eventlistener ++++++++++
+    const btn2 = document.querySelector(".btn2");
+    btn2.addEventListener("click", saveHaus);
+
+    // ! ++++++++++ Frage Haus++++++++++
+
+    var formHaus = document.getElementById("formHaus");
+    formHaus.style.display = "block";
   }
-  console.log(haus);
+
+  function saveHaus() {
+    var hausInput = document.getElementById("hausInput").value;
+    localStorage.setItem("promptHaus", hausInput);
+    formHaus.style.display = "none";
+    location.reload();
+  }
+  console.log(hausInput);
 
   // ! ++++++++++ Wappen einstellen ++++++++++
 
@@ -68,7 +96,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     var label = document.createElement("div");
     label.className = "label-g";
-    label.textContent = name;
+    label.textContent = nameInput;
     marker.appendChild(label);
 
     // ! ++++++++++ Marker setzen ++++++++++
@@ -81,7 +109,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     var label = document.createElement("div");
     label.className = "label-s";
-    label.textContent = name;
+    label.textContent = nameInput;
     marker.appendChild(label);
 
     // ! ++++++++++ Marker setzen ++++++++++
@@ -94,7 +122,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     var label = document.createElement("div");
     label.className = "label-h";
-    label.textContent = name;
+    label.textContent = nameInput;
     marker.appendChild(label);
 
     // ! ++++++++++ Marker setzen ++++++++++
@@ -107,7 +135,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     var label = document.createElement("div");
     label.className = "label-r";
-    label.textContent = name;
+    label.textContent = nameInput;
     marker.appendChild(label);
 
     // ! ++++++++++ Marker setzen ++++++++++
@@ -120,7 +148,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     var label = document.createElement("div");
     label.className = "label";
-    label.textContent = name;
+    label.textContent = nameInput;
     marker.appendChild(label);
 
     // ! ++++++++++ Marker setzen ++++++++++
