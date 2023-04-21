@@ -1,7 +1,7 @@
 // Delay animation by 2 seconds
 
 setTimeout(function () {
-  document.querySelector(".animation-text").style.animationDelay = "1s";
+  document.querySelector(".animation-text").style.animationDelay = "0s";
 }, 0);
 
 // Remove text element after fade-out animation completes
@@ -72,7 +72,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     //Marker setzen
     new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
-
   } else if (localStorage.getItem("promptHaus") == "S") {
     console.log("Slytherin");
 
@@ -84,7 +83,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     //Marker setzen
     new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
-
   } else if (localStorage.getItem("promptHaus") == "H") {
     console.log("Hufflepuff");
 
@@ -96,7 +94,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     //Marker setzen
     new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
-
   } else if (localStorage.getItem("promptHaus") == "R") {
     console.log("Ravenclaw");
 
@@ -108,7 +105,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
     //Marker setzen
     new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
-
   } else {
     console.log("Kein Haus ausgewählt");
 
@@ -126,5 +122,4 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
   map.setZoom(13);
   map.setCenter(lngLat);
-  
 });

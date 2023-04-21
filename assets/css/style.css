@@ -1,27 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
+/* ! ++++++++++ BASIC ++++++++++ */
+
+@font-face {
+  font-family: "Regular";
+  src: url(../font/Jim_Nightshade/JimNightshade-Regular.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Jim Nightshade", serif;
+  font-family: "Regular", serif;
 }
 
-/* ++++++++++ Animation ++++++++++ */
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+:root {
+  --main: #e4d3a0;
+  --light: #5c282f;
+  --medium: #410e1a;
+  --dark: #21050f;
+  --deepbrown: #2a1205;
+  --white: white;
+  --black: black;
 }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.bg {
+  background-color: var(--main);
+}
+
+/* ! ++++++++++ ANIMATION ++++++++++ */
 
 @keyframes float {
   0% {
@@ -44,73 +65,88 @@
   }
 }
 
+/* ! ++++++++++ INTRO ++++++++++ */
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .animation-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
   font-weight: bold;
-  color: black;
+  color: var(--black);
   background-color: #e4d3a0;
   text-align: center;
   opacity: 0;
-  animation: fade-in-out 5s linear forwards;
-  width: 100vw;
-  height: 100vh;
+  animation: intro 5s linear forwards;
 }
 
-.bg {
-  background-color: #e4d3a0;
+/* ! ++++++++++ HEADER ++++++++++ */
+
+header {
+  height: 5rem;
 }
 
-/* ++++++++++ Header ++++++++++ */
-
-h1 {
+header h1 {
   text-align: center;
-  font-size: 2rem;
   padding: 2vh 0;
 }
 
-header a {
-  display: block;
-  margin: auto;
-  color: black;
-  background-color: #e4d3a0;
-  text-align: center;
-  width: 300px;
-  height: 50px;
-  border: solid black 2px;
-  border-radius: 5px;
-  text-decoration: none;
-}
+/* ! ++++++++++ MAIN ++++++++++ */
 
-header a:hover {
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  color: white;
-  background-color: #7e6003;
-  text-align: center;
-  width: 300px;
-  height: 50px;
-  border: solid black 2px;
-  border-radius: 5px;
-  text-decoration: none;
-}
+/* ++++++++++ NAV ++++++++++ */
 
-/* ++++++++++ Main ++++++++++ */
-
-#karte {
-  margin: auto;
-  height: 90vh;
-  width: 80vw;
-  box-shadow: 0px 0px 20px black;
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  left: 25%;
+  z-index: 2;
+  width: 50%;
+  height: 5rem;
   border-radius: 10px;
+  background-color: var(--main);
+  border: 3px solid var(--light);
+  box-shadow: 0px 0px 5px var(--black);
 }
+
+/* ++++++++++ KARTE ++++++++++ */
 
 .container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: #e4d3a0;
+  z-index: 0;
+}
+
+.karte {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 .marker {
@@ -202,10 +238,29 @@ header a:hover {
   animation: float 2s linear 0s infinite normal none;
 }
 
-/* ++++++++++ Footer ++++++++++ */
+/* ! ++++++++++ FOOTER ++++++++++ */
 
-h2 {
+footer {
+  height: 10rem;
+}
+
+footer h3 {
   text-align: center;
-  font-size: 2rem;
-  padding: 2vh 0;
+  padding-bottom: 1rem;
+}
+
+/* ! ++++++++++ MOBILE ++++++++++ */
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
 }

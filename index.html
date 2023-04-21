@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./script.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js">
-    </script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div class="bg">
-    <header>
-      <div class="animation-text">
-        Ich schwöre feierlich, <br />ich bin ein Tunichtgut.
-      </div>
-      <h1>Maurauders Map V1.0</h1>
-      <!-- <a href="#">Freund hinzufügen (aktuell keine Funktion)</a> -->
-    </header>
-    <main>
-      <div class="container">
-        <div id="karte"></div>
+      <!-- ! ++++++++++ HEADER ++++++++++ -->
+      <header>
+        <section class="animation-text">
+          <h1>Ich schwöre feierlich, <br />ich bin ein Tunichtgut.</h1>
+        </section>
+      </header>
+      <!-- ! ++++++++++ MAIN ++++++++++ -->
+      <main>
+        <div class="nav">
+          <h1>Maurauders Map</h1>
+        </div>
+        <section class="container">
+          <div class="karte" id="karte"></div>
+        </section>
       </main>
+      <!-- ! ++++++++++ FOOTER ++++++++++ -->
       <footer>
-        <h2>Made by Niklas - Inspo von Marcelo</h2>
+        <h3>Made by Niklas</h3>
+        <h3>Inspo von Marcelo</h3>
       </footer>
     </div>
     <script src="script.js"></script>
