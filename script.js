@@ -161,3 +161,15 @@ navigator.geolocation.getCurrentPosition(function (position) {
   map.setZoom(13);
   map.setCenter(lngLat);
 });
+
+// ! ++++++++++ MENU EIN/AUSBLENDEN ++++++++++
+var menuToggle = document.getElementById("menu-toggle");
+var menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", function () {
+  if (menu.style.left === "-200px") {
+    menu.style.left = "20px";
+  } else {
+    menu.style.left = "-200px";
+  }
+});

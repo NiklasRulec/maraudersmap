@@ -42,6 +42,10 @@ p {
   font-size: 1.8rem;
 }
 
+a {
+  font-size: 2rem;
+}
+
 .bg {
   background-color: var(--main);
 }
@@ -112,6 +116,7 @@ header {
 
 header h1 {
   text-align: center;
+  color: var(--medium);
   padding: 2vh 0;
 }
 
@@ -127,7 +132,7 @@ main {
   z-index: 0;
 }
 
-/* ++++++++++ FRAGE ++++++++++ */
+/* ! ++++++++++ FRAGE ++++++++++ */
 
 .formName,
 .formHaus {
@@ -167,14 +172,14 @@ main {
   width: 30%;
 }
 
-/* ++++++++++ NAV ++++++++++ */
+/* ! ++++++++++ NAV ++++++++++ */
 
 .nav {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   position: fixed;
-  top: 1rem;
+  top: 2rem;
   left: 25%;
   z-index: 2;
   width: 50%;
@@ -185,7 +190,75 @@ main {
   box-shadow: 0px 0px 5px var(--black);
 }
 
-/* ++++++++++ KARTE ++++++++++ */
+.nav h1 {
+  color: var(--medium);
+}
+
+/* ! ++++++++++ MENU ++++++++++ */
+
+#menu {
+  position: absolute;
+  top: 100px;
+  left: -200px;
+  z-index: 5;
+  width: 150px;
+  height: 200px;
+  background-color: var(--main);
+  border: 3px solid var(--light);
+  color: var(--deepbrown);
+  box-shadow: 3px 3px 10px black;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+#menu ul {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--medium);
+}
+
+#menu li {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+#menu a {
+  display: block;
+  padding: 10px;
+  color: var(--medium);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu a:hover {
+  transform: scale(1.2);
+}
+
+/* ! ++++++++++ BUTTON ++++++++++ */
+
+button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 5;
+  width: 10rem;
+  height: 5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 3px solid var(--light);
+  color: var(--medium);
+  background-color: var(--main);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+/* ! ++++++++++ KARTE ++++++++++ */
 
 .karte {
   margin: 0 auto;
@@ -209,7 +282,7 @@ main {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 30%;
   z-index: 2;
   width: 40%;
@@ -218,6 +291,10 @@ main {
   background-color: var(--main);
   border: 3px solid var(--light);
   box-shadow: 0px 0px 5px var(--black);
+}
+
+.footer h3 {
+  color: var(--medium);
 }
 
 /* ? ++++++++++ LABELS ++++++++++ */
@@ -230,7 +307,7 @@ main {
   background-position: right, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
-  color: black;
+  color: var(--medium);
   text-align: center;
   padding-top: 10px;
   font-size: 22px;
