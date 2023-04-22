@@ -235,6 +235,7 @@ main {
 
 #menu a:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* ! ++++++++++ BUTTON ++++++++++ */
@@ -260,6 +261,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* ! ++++++++++ KARTE ++++++++++ */
