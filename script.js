@@ -167,9 +167,9 @@ var menuToggle = document.getElementById("menu-toggle");
 var menu = document.getElementById("menu");
 
 menuToggle.addEventListener("click", function () {
-  if (menu.style.left === "-200px") {
-    menu.style.left = "20px";
+  if (menu.style.left === "-20rem") {
+    menu.style.left = "1rem";
   } else {
-    menu.style.left = "-200px";
+    menu.style.left = "-20rem";
   }
 });
