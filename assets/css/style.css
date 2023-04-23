@@ -159,17 +159,31 @@ main {
   border-radius: 10px;
   margin: 20% auto;
   padding: 1rem;
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 30%;
 }
 
-.formName-content button,
-.formHaus-content button {
+.formName .formName-content .btn,
+.formHaus .formHaus-content .btn2 {
+  position: static;
+  margin: 1rem auto 0 auto;
+  width: 8rem;
+  height: 5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
-  width: 30%;
+  border-radius: 10px;
+  border: 3px solid var(--light);
+  color: var(--medium);
+  background-color: var(--main);
+  transition: all 0.2s ease-in-out;
+}
+
+.formName .formName-content .btn:hover,
+.formHaus .formHaus-content .btn2:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* ! ++++++++++ NAV ++++++++++ */
@@ -240,7 +254,7 @@ main {
 
 /* ! ++++++++++ BUTTON ++++++++++ */
 
-button {
+#menu-toggle {
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -259,7 +273,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+#menu-toggle:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
