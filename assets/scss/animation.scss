@@ -1,0 +1,57 @@
+/* ! ++++++++++ ANIMATION ++++++++++ */
+
+@keyframes float {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ! ++++++++++ INTRO ++++++++++ */
+
+@keyframes intro {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animation-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--black);
+  background-color: #e4d3a0;
+  text-align: center;
+  opacity: 0;
+  animation: intro 5s linear forwards;
+}

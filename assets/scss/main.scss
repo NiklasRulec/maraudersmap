@@ -1,0 +1,118 @@
+/* ! ++++++++++ BASIC ++++++++++ */
+
+@import "font.scss";
+@import "animation.scss";
+@import "setup.scss";
+@import "menu.scss";
+@import "labels.scss";
+@import "responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Regular", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --main: #e4d3a0;
+  --light: #5c282f;
+  --medium: #410e1a;
+  --dark: #21050f;
+  --deepbrown: #2a1205;
+  --white: white;
+  --black: black;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.bg {
+  background-color: var(--main);
+}
+
+/* ! ++++++++++ HEADER ++++++++++ */
+
+header {
+  height: 5rem;
+}
+
+header h1 {
+  text-align: center;
+  color: var(--medium);
+  padding: 2vh 0;
+}
+
+/* ! ++++++++++ MAIN ++++++++++ */
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e4d3a0;
+  z-index: 0;
+}
+
+/* ! ++++++++++ NAV ++++++++++ */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  left: 30%;
+  z-index: 2;
+  width: 40%;
+  height: 5rem;
+  border-radius: 10px;
+  background-color: var(--main);
+  border: 3px solid var(--light);
+  box-shadow: 0px 0px 5px var(--black);
+}
+
+.nav h1 {
+  color: var(--medium);
+}
+
+/* ! ++++++++++ KARTE ++++++++++ */
+
+.karte {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.marker {
+  background-image: url("../img/Schritte.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+/* ! ++++++++++ FOOTER ++++++++++ */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  left: 30%;
+  z-index: 2;
+  width: 40%;
+  height: 5rem;
+  border-radius: 10px;
+  background-color: var(--main);
+  border: 3px solid var(--light);
+  box-shadow: 0px 0px 5px var(--black);
+}
+
+.footer h3 {
+  color: var(--medium);
+}

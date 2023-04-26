@@ -1,0 +1,48 @@
+/* ? ++++++++++ LABELS ++++++++++ */
+
+.label,
+.label-g,
+.label-s,
+.label-r,
+.label-h {
+  background-position: right, center;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  color: var(--medium);
+  text-align: center;
+  padding-top: 10px;
+  font-size: 22px;
+  width: 175px;
+  height: 40px;
+  animation: float 2s linear 0s infinite normal none;
+}
+
+/* ? ++++++++++ Hogwarts ++++++++++ */
+
+.label {
+  background-image: url("../img/Hogwarts.png"), url("../img/Schriftrolle.png");
+}
+
+/* ? ++++++++++ Gryffindor ++++++++++ */
+
+.label-g {
+  background-image: url("../img/Gryffindor.png"), url("../img/Schriftrolle.png");
+}
+
+/* ? ++++++++++ Slytherin ++++++++++ */
+
+.label-s {
+  background-image: url("../img/Slytherin.png"), url("../img/Schriftrolle.png");
+}
+
+/* ? ++++++++++ Hufflepuff ++++++++++ */
+
+.label-h {
+  background-image: url("../img/Hufflepuff.png"), url("../img/Schriftrolle.png");
+}
+
+/* ? ++++++++++ Ravenclaw ++++++++++ */
+
+.label-r {
+  background-image: url("../img/Ravenclaw.png"), url("../img/Schriftrolle.png");
+}

@@ -1,0 +1,29 @@
+/* ! ++++++++++ MOBILE ++++++++++ */
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
