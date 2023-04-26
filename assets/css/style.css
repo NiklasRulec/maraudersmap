@@ -204,41 +204,81 @@ a {
 .label-s,
 .label-r,
 .label-h {
-  background-position: right, center;
-  background-size: contain, cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   color: var(--medium);
   text-align: center;
-  padding-top: 10px;
-  font-size: 22px;
-  width: 175px;
-  height: 40px;
+  font-size: 2rem;
+  width: 20rem;
+  height: 15rem;
   animation: float 2s linear 0s infinite normal none;
+  margin-top: -5rem;
+}
+
+.wappen,
+.wappen-g,
+.wappen-s,
+.wappen-r,
+.wappen-h {
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: var(--medium);
+  text-align: center;
+  font-size: 2rem;
+  width: 19rem;
+  height: 5rem;
+  animation: float 2s linear 0s infinite normal none;
+  margin-top: -10rem;
 }
 
 /* ? ++++++++++ Hogwarts ++++++++++ */
 .label {
-  background-image: url("../img/Hogwarts.png"), url("../img/Schriftrolle.png");
+  background-image: url("../img/Schriftrolle2.png");
+}
+
+.wappen {
+  background-image: url("../img/Hogwarts.png");
 }
 
 /* ? ++++++++++ Gryffindor ++++++++++ */
 .label-g {
-  background-image: url("../img/Gryffindor.png"), url("../img/Schriftrolle.png");
+  background-image: url("../img/Schriftrolle2.png");
+}
+
+.wappen-g {
+  background-image: url("../img/Gryffindor.png");
 }
 
 /* ? ++++++++++ Slytherin ++++++++++ */
 .label-s {
-  background-image: url("../img/Slytherin.png"), url("../img/Schriftrolle.png");
+  background-image: url("../img/Schriftrolle2.png");
+}
+
+.wappen-s {
+  background-image: url("../img/Slytherin.png");
 }
 
 /* ? ++++++++++ Hufflepuff ++++++++++ */
 .label-h {
-  background-image: url("../img/Hufflepuff.png"), url("../img/Schriftrolle.png");
+  background-image: url("../img/Schriftrolle2.png");
+}
+
+.wappen-h {
+  background-image: url("../img/Hufflepuff.png");
 }
 
 /* ? ++++++++++ Ravenclaw ++++++++++ */
 .label-r {
-  background-image: url("../img/Ravenclaw.png"), url("../img/Schriftrolle.png");
+  background-image: url("../img/Schriftrolle2.png");
+}
+
+.wappen-r {
+  background-image: url("../img/Ravenclaw.png");
 }
 
 /* ! ++++++++++ MOBILE ++++++++++ */
@@ -318,9 +358,9 @@ main {
   align-items: center;
   position: fixed;
   top: 1rem;
-  left: 30%;
+  left: 35%;
   z-index: 2;
-  width: 40%;
+  width: 30%;
   height: 5rem;
   border-radius: 10px;
   background-color: var(--main);
@@ -343,8 +383,8 @@ main {
   background-image: url("../img/Schritte.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   cursor: pointer;
 }
 
@@ -359,7 +399,7 @@ main {
   z-index: 2;
   width: 40%;
   height: 5rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: var(--main);
   border: 3px solid var(--light);
   box-shadow: 0px 0px 5px var(--black);

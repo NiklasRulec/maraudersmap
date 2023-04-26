@@ -35,6 +35,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
       labelG.className = "label-g";
       labelG.textContent = nameInput;
       marker.appendChild(labelG);
+      let wappenG = document.createElement("div");
+      wappenG.className = "wappen-g";
+      marker.appendChild(wappenG);
 
       new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
       break;
@@ -46,6 +49,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
       labelS.className = "label-s";
       labelS.textContent = nameInput;
       marker.appendChild(labelS);
+      let wappenS = document.createElement("div");
+      wappenS.className = "wappen-s";
+      marker.appendChild(wappenS);
 
       new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
       break;
@@ -57,6 +63,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
       labelH.className = "label-h";
       labelH.textContent = nameInput;
       marker.appendChild(labelH);
+      let wappenH = document.createElement("div");
+      wappenH.className = "wappen-h";
+      marker.appendChild(wappenH);
 
       new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
       break;
@@ -68,6 +77,9 @@ navigator.geolocation.getCurrentPosition(function (position) {
       labelR.className = "label-r";
       labelR.textContent = nameInput;
       marker.appendChild(labelR);
+      let wappenR = document.createElement("div");
+      wappenR.className = "wappen-r";
+      marker.appendChild(wappenR);
 
       new mapboxgl.Marker(marker).setLngLat(lngLat).addTo(map);
       break;
