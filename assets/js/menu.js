@@ -10,3 +10,21 @@ menuToggle.addEventListener("click", function () {
     menu.style.left = "-20rem";
   }
 });
+
+// ! ++++++++++ Aktuellen Namen löschen ++++++++++
+
+let deleteName = document.querySelector(".deletename");
+deleteName.addEventListener("click", function () {
+  localStorage.removeItem("userName");
+  location.reload();
+  console.log("userName gelöscht");
+});
+
+// ! ++++++++++ Aktuelles Haus löschen ++++++++++
+
+let deleteHouse = document.querySelector(".deletehouse");
+deleteHouse.addEventListener("click", function () {
+  localStorage.removeItem("userHouse");
+  location.reload();
+  console.log("userHouse gelöscht");
+});
